@@ -1,0 +1,27 @@
+<h1>Listing joborders</h1>
+
+<table>
+  <tr>
+    <th>Joborderid</th>
+    <th>Desc</th>
+    <th>Customer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @joborders.each do |joborder| %>
+  <tr>
+    <td><%= joborder.joborderid %></td>
+    <td><%= joborder.desc %></td>
+    <td><%= joborder.customer_id %></td>
+    <td><%= link_to 'Show', joborder %></td>
+    <td><%= link_to 'Edit', edit_joborder_path(joborder) %></td>
+    <td><%= link_to 'Destroy', joborder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Joborder', new_joborder_path %>

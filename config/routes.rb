@@ -1,4 +1,10 @@
 Astron::Application.routes.draw do
+  resources :joborders
+
+  resources :products
+
+  resources :categories
+
   #get "users/new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

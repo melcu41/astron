@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Joborderid:</b>
+  <%= @joborder.joborderid %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @joborder.desc %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @joborder.customer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_joborder_path(@joborder) %> |
+<%= link_to 'Back', joborders_path %>

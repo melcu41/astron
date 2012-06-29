@@ -10,12 +10,62 @@
 			
 			<li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Operation <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Search Product", products_path %></li>
+				<li class="divider"></li>
+				<li><%= link_to "Purchase Order", categories_path %></li>
+				<li class="divider"></li>
+                <li><%= link_to "Cost Sheet", products_path %></li>
+				<li><%= link_to "Cost Estimate Sheet", products_path %></li>
+				<li class="divider"></li>
+				<li><%= link_to "Job Order Hours", products_path %></li>
+                <li class="divider"></li>
+				<li><%= link_to "Inventory", products_path %></li>
+				<li><%= link_to "Physical Count", products_path %></li>
+              </ul>
+            </li>
+			
+			<li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Maintenance <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Category", '#' %></li>
-                <li><%= link_to "Product", '#' %></li>
-                <li class="divider"></li>
+				<li><%= link_to "Customer", products_path %></li>
+				<li><%= link_to "Supplier", products_path %></li>
+				<li class="divider"></li>
+				<li><%= link_to "Category", categories_path %></li>
+                <li><%= link_to "Product", products_path %></li>
+				<li><%= link_to "Job Order", products_path %></li>
+				<li><%= link_to "Units", products_path %></li>
+				<li><%= link_to "Rates", products_path %></li>
+				<li class="divider"></li>
+				<li><%= link_to "Company", products_path %></li>
+              </ul>
+            </li>
+			
+			<li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Finance <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+				<li><%= link_to "Accounts Payable", products_path %></li>
+				<li><%= link_to "Accounts Receivable", products_path %></li>
+				<li class="divider"></li>
+				<li><%= link_to "Product History", categories_path %></li>
+              </ul>
+            </li>
+			
+			<li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Reports <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+				<li><%= link_to "Purchase Order", products_path %></li>
+				<li class="divider"></li>
+				<li><%= link_to "Aging Report", categories_path %></li>
+				<li><%= link_to "Comparative Cost Estimate vs Actual Report", categories_path %></li>
               </ul>
             </li>
 			
@@ -26,6 +76,7 @@
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+				<li><%= link_to "Change Password", products_path %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>
