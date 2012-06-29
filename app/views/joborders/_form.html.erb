@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :customer_id %><br />
-    <%= f.number_field :customer_id %>
+	<%= @customers = Customer.find(:all, :order => "name") 
+    collection_select(:joborders, :customer_id, @customers, :id, :name, options ={:prompt => "Select a customer"}, :class =>"customer") %>
   </div>
   <div class="actions">
     <%= f.submit %>

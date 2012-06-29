@@ -1,4 +1,5 @@
 class JobordersController < ApplicationController
+before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
   # GET /joborders
   # GET /joborders.json
   def index
