@@ -1,4 +1,6 @@
 Astron::Application.routes.draw do
+  resources :suppliers
+
   resources :customers
 
   resources :joborders
