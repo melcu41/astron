@@ -1,6 +1,6 @@
 <h1>Product Maintenance</h1>
 
-<table>
+<table id="products">
   <tr>
     <th>Category</th>
 	<th>Name</th>
@@ -9,7 +9,7 @@
     <th></th>
     <th></th>
   </tr>
-<ul class="products">
+<ul>
 <% @products.each do |product| %>
   <tr>
   <td><%= product.category.name %></td>

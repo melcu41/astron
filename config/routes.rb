@@ -1,4 +1,8 @@
 Astron::Application.routes.draw do
+  resources :units
+
+  resources :rates
+
   resources :suppliers
 
   resources :customers

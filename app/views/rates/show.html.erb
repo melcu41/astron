@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Operatorname:</b>
+  <%= @rate.operatorname %>
+</p>
+
+<p>
+  <b>Operatorsymbol:</b>
+  <%= @rate.operatorsymbol %>
+</p>
+
+<p>
+  <b>Ratepercent:</b>
+  <%= @rate.ratepercent %>
+</p>
+
+<p>
+  <b>Rateamt:</b>
+  <%= @rate.rateamt %>
+</p>
+
+
+<%= link_to 'Edit', edit_rate_path(@rate) %> |
+<%= link_to 'Back', rates_path %>

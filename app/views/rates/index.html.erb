@@ -1,0 +1,29 @@
+<h1>Rate Maintenance</h1>
+
+<table id="rates">
+  <tr>
+    <th>Operatorname</th>
+    <th>Operatorsymbol</th>
+    <th>Ratepercent</th>
+    <th>Rateamt</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rates.each do |rate| %>
+  <tr>
+    <td><%= rate.operatorname %></td>
+    <td><%= rate.operatorsymbol %></td>
+    <td><%= rate.ratepercent %></td>
+    <td><%= rate.rateamt %></td>
+    <td><%= link_to 'Show', rate %></td>
+    <td><%= link_to 'Edit', edit_rate_path(rate) %></td>
+    <td><%= link_to 'Destroy', rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rate', new_rate_path %>

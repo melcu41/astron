@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Unitname:</b>
+  <%= @unit.unitname %>
+</p>
+
+<p>
+  <b>Unitsymbol:</b>
+  <%= @unit.unitsymbol %>
+</p>
+
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>
